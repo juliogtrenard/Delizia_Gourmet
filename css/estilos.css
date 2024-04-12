@@ -1,0 +1,773 @@
+@font-face {
+    font-family: 'lobsterregular';
+    src: url('../fonts/lobster-regular-webfont.woff2') format('woff2'), url('../fonts/lobster-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*//////////////////////////////////////// MENÚ DE NAVEGACIÓN ///////////////////////////////////////////////*/
+
+:root {
+    --principal: #1b1b1b;
+    --brightred: #F9423D;
+    --white: #fff;
+    --lightred: #f9433dcc;
+}
+.nav-contenedor {
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.navbar {
+    background-color: var(--principal);
+    padding: 5px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+}
+li a {
+    color: var(--white);
+    text-decoration: none;
+}
+li a:hover {
+    color: var(--lightred);
+    transition: 0.2s;
+}
+
+.nav-menu li {
+    font-size: 20px;
+    padding: 15px 5px;
+}
+
+.nav-menu li a {
+    display: block;
+}
+
+.div-desplegable {
+    background-color: var(--principal);
+    box-shadow: 5px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: none;
+    right: 12.5%;
+}
+
+.div-desplegable a {
+    padding: 9px 15px;
+    color: var(--white);
+    display: block;
+}
+
+.div-desplegable a:hover {
+    background-color: #e5e5f5;
+}
+
+.nav-links.desplegable:hover .div-desplegable {
+    display: block;
+    margin-top: 15px;
+    transition: all 2s ease-in-out;
+}
+
+.logo a {
+    font-size: 30px;
+    font-family: 'lobsterregular';
+    animation-name: animacion-logo;
+    animation-duration: 2.5s;
+    position: relative;
+    left: 0;
+}
+.logo a:hover {
+    color: #F0F0F0;
+}
+.logo p {
+    font-size: 18px;
+    font-family: 'Poppins';
+    animation-name: animacion-logo;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+.logo p:hover {
+    transform: translateX(30px);
+    transition: 0.5s;
+}
+
+@keyframes animacion-logo {
+    0% {left: -1000px;}
+    100% {left: 0px;}
+}
+
+.nav-links.btn {
+    border-bottom: 1px solid #444;
+}
+
+/* Menú móvil */
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.nav-links.btn {
+    order: 2;
+}
+
+.nav-links {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.nav-links.active {
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.barras {
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+
+.barras::before, .barras::after {
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+
+.barras::before {
+    top: 5px;
+}
+
+.barras::after {
+    top: -5px;
+}
+
+/* Menú Tablet */
+
+@media screen and (min-width: 468px) {
+    .navmenu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .nav-links.btn {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        order: 2;
+    }
+    .nav-links.btn {
+        border: 0;
+    }
+    .btn a {
+        padding: 7px 15px;
+        background: var(--lightred);
+        border-radius: 4px;
+        border: solid 1px var(--brightred);
+    }
+    .btn a:hover {
+        background-color: transparent;
+        color: var(--white);
+        transition: 0.5s;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-links {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .nav-links {
+        order: 1;
+    }
+    .btn {
+        order: 2;
+    }
+    .nav-menu li {
+        padding: 15px 10px;
+    }
+}
+
+/*///////////////////////////////////////////////PORTADA//////////////////////////////////////////////////////*/
+
+.portada {
+    width: 100%;
+    height: auto;
+}
+.portada img {
+    width: 100%;
+    height: auto;
+}
+
+/*///////////////////////////////////////////////ACERCA DE///////////////////////////////////////////////////*/
+
+#contenedor-acercade {
+    width: 100%;
+    height: 700px;
+    display: table;
+}
+#celda1 {
+    display: table-cell;
+    width: 50vw;
+    vertical-align: top;
+    position: relative;
+}
+#celda1 h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 130px;
+    font-family: 'lobsterregular';
+    font-weight: normal;
+}
+#celda1 p {
+    text-align: left;
+    font-size: 22px;
+    padding: 0 50px;
+}
+#celda1 p:nth-child(2), #celda1 p:nth-child(3), #parrafo-mayus {
+    margin-top: 40px;
+}
+#celda1 p::first-letter {
+    margin-left: 50px;
+}
+#celda2 {
+    display: table-cell;
+    width: 50vw;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-top: 50px;
+}
+#celda2 img {
+    width: 400px;
+    height: 500px;
+}
+#img1-acercade {
+    border: 5px solid white;
+    position: absolute;
+    z-index: 2;
+}
+#img2-acercade {
+    position: absolute;
+    bottom: 50px;
+    left: 280px;
+    z-index: 1;
+}
+@media screen and (max-width: 767px) {
+    #celda1 h1 {
+        font-size: 28px;
+        padding-bottom: 30px;
+        padding-top: 90px;
+    }
+    #celda1 p {
+        font-size: 16px;
+        padding: 0 30px;
+    }
+    #celda2 img {
+        width: 200px;
+        height: 300px;
+    }
+    #img2-acercade {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #celda1 p:nth-child(2), #celda1 p:nth-child(3), #parrafo-mayus {
+        margin-top: 20px;
+    }
+}
+
+/*///////////////////////////////////////////////GALERÍA/////////////////////////////////////////////////////*/
+
+#contenedor-galeria{
+    width: 100%;
+    height: 700px;
+    background-image: url(../imagenes/fondo.jpg);
+}
+#contenedor-galeria h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'lobsterregular';
+    font-weight: normal;
+    padding: 90px 0 40px 0;
+}
+.marcoFoto {
+    overflow: hidden;
+    width:25%;
+    border: 5px solid #FFF;
+    box-sizing:border-box;
+    float:left;
+}
+
+.marcoFoto img {
+    transition: 0.4s;
+    width: 375px;
+    height: 279px;
+}
+
+.marcoFoto img:hover {
+    transform:scale(1.2);
+}
+@media screen and (max-width: 767px) {
+    #contenedor-galeria h1 {
+        font-size: 28px;
+        padding: 40px 0 20px 0;
+    }
+    .marcoFoto {
+        width: 50%;
+        border: 2px solid #FFF;
+    }
+    .marcoFoto img {
+        width: 250px;
+        height: 200px;
+    }
+    #contenedor-galeria {
+        height: 950px;
+    }
+}
+
+/*////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////*/
+
+#contenedor-servicios {
+    width: 100%;
+    height: 600px;
+}
+#contenido-servicios {
+    text-align: center;
+}
+#contenido-servicios h1 {
+    padding: 90px 0 50px 0;
+    font-size: 40px;
+    font-family: 'lobsterregular';
+    font-weight: normal;
+}
+#contenido-servicios p {
+    font-size: 22px;
+    padding: 30px 100px 50px 100px;
+}
+#imagenes-servicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+#imagenes-servicios p {
+    font-size: 20px;
+    text-align: center;
+}
+#imagenes-servicios a {
+    color: black;
+    text-decoration: none;
+}
+#contenedor-pizza, #contenedor-pasta, #contenedor-lasana, #contenedor-bebidas {
+    transition: 0.5s;
+}
+#contenedor-pizza:hover, #contenedor-pasta:hover, #contenedor-lasana:hover, #contenedor-bebidas:hover {
+    transform: scale(1.3);
+}
+@media screen and (max-width: 767px) {
+    #contenido-servicios h1 {
+        padding: 50px 0 30px 0;
+        font-size: 28px;
+    }
+    #contenido-servicios p {
+        font-size: 18px;
+        padding: 20px 50px 30px 50px;
+    }
+    #contenedor-pizza img, #contenedor-pasta img, #contenedor-lasana img, #contenedor-bebidas img {
+        width: 60px;
+        height: 60px;
+    }
+    #contenedor-pizza p, #contenedor-pasta p, #contenedor-lasana p, #contenedor-bebidas p {
+        font-size: 15px;
+    }
+    #contenedor-servicios {
+        height: 500px;
+    }
+}
+
+/*//////////////////////////////////////////////MENÚ////////////////////////////////////////////////////*/
+
+#contenedor-menu {
+    width: 100%;
+    height: 2000px;
+    background-image: url(../imagenes/fondo.jpg);
+}
+#contenedor-menu h1 {
+    text-align: center;
+    padding: 90px 0 60px 0;
+    font-family: 'lobsterregular';
+    font-size: 40px;
+    font-weight: normal;
+}
+#menu-pizzas {
+    margin: auto;
+    width: 60vw;
+}
+#menu-pizzas h2 {
+    padding-top: 90px;
+    text-align: center;
+    font-size: 28px;
+}
+.tipo-pizza p {
+    padding: 8px 0;
+    font-size: 19px;
+}
+#menu-pastas {
+    margin: auto;
+    width: 60vw;
+}
+#menu-pastas h2 {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 28px;
+}
+.tipo-pasta p {
+    padding: 8px 0;
+    font-size: 19px;
+}
+#menu-lasanas {
+    margin: auto;
+    width: 60vw;
+}
+#menu-lasanas h2 {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 28px;
+}
+.tipo-lasana p {
+    padding: 8px 0;
+    font-size: 19px;
+}
+#menu-vinos {
+    margin: auto;
+    width: 60vw;
+}
+#menu-vinos h2 {
+    text-align: center;
+    padding-top: 90px;
+    font-size: 28px;
+}
+.tipo-vino p {
+    padding: 8px 0;
+    font-size: 19px;
+}
+[src*="logo-vegetariano"] {
+    width: 30px;
+    height: 30px;
+    padding-left: 5px;
+}
+.tipo-pizza, .tipo-pasta, .tipo-lasana, .tipo-vino {
+    border: 1px solid black;
+    padding-left: 30px;
+    transition: 0.7s;
+    background-color: white;
+}
+.tipo-pizza p:nth-child(3), .tipo-pasta p:nth-child(3), .tipo-lasana p:nth-child(3), .tipo-vino p:nth-child(2) {
+    margin-right: 15px;
+    text-align: right;
+    font-style: italic;
+}
+.tipo-pizza p:nth-child(2), .tipo-pasta p:nth-child(2), .tipo-lasana p:nth-child(2), .tipo-vino p:nth-child(1) {
+    font-weight: bold;
+    margin-left: 20px;
+}
+.tipo-pizza:hover, .tipo-lasana:hover, .tipo-pasta:hover, .tipo-vino:hover {
+    background-color: rgba(255, 148, 148, 0.21);
+}
+@media screen and (max-width: 767px) {
+    #contenedor-menu h1 {
+        padding-top: 80px;
+        font-size: 28px;
+    }
+    #menu-pizzas h2, #menu-pastas h2, #menu-lasanas h2, #menu-vinos h2 {
+        padding-top: 30px;
+        font-size: 20px;
+        padding-top: 70px;
+    }
+    .tipo-pizza p, .tipo-pasta p, .tipo-lasana p, .tipo-vino p {
+        padding: 8px 0;
+        font-size: 17px;
+    }
+}
+
+/*////////////////////////////////////////////////CHEF////////////////////////////////////////////////////*/
+
+#contenido-chef {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 50px;
+}
+#contenedor-chef h1 {
+    text-align: center;
+    padding-top: 90px;
+    font-family: 'lobsterregular';
+    font-size: 40px;
+    font-weight: normal;
+}
+#bloque-izq img {
+    max-width: 100%;
+}
+#bloque-izq {
+    flex: 0 1 50%;
+}
+#bloque-der {
+    flex: 0 1 50%;
+}
+#bloque-der p {
+    text-align: left;
+    font-size: 22px;
+    padding: 0 50px 0 0;
+}
+#bloque-der p:nth-child(1) {
+    margin-top: 50px;
+}
+#bloque-der p:nth-child(2), #bloque-der p:nth-child(3) {
+    margin-top: 20px;
+}
+#bloque-der p::first-letter {
+    margin-left: 50px;
+}
+#premio {
+    color: #646bff;
+    text-decoration: none;
+    transition: 1s;
+}
+#premio:hover {
+    color: #0e18ff;
+    text-decoration: underline;
+}
+[src*="premio-vitoria"] {
+    height: 150px;
+    width: 250px;
+    float: right;
+}
+@media screen and (max-width: 767px) {
+    #contenedor-contenido {
+        flex-direction: column;
+    }
+    #contenedor-chef h1 {
+        padding-top: 90px;
+        font-size: 28px;
+    }
+    #bloque-der p {
+        text-align: left;
+        font-size: 18px;
+    }
+    #bloque-izq img {
+        padding-top: 300px;
+    }
+    [src*="premio-vitoria"] {
+        height: 120px;
+        width: 220px;
+    }
+}
+
+/*/////////////////////////////////////////////////CONTACTO////////////////////////////////////////////////*/
+
+#contenedor-contacto {
+    width: 100%;
+    height: 650px;
+    background-image: url(../imagenes/fondo.jpg);
+}
+#contenedor-contacto h1 {
+    text-align: center;
+    padding-top: 90px;
+    font-family: 'lobsterregular';
+    font-size: 40px;
+    font-weight: normal;
+}
+#contacto-contenido {
+    padding-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contacto-telefono p, .contacto-ubicacion p, .contacto-horario p, .contacto-correo p {
+    font-size: 18px;
+    text-align: center;
+}
+#contacto-contenido img {
+    width: 120px;
+    height: 150px;
+}
+.contacto-ubicacion img {
+    margin-left: 30px;
+}
+.contacto-horario img {
+    margin-left: 70px;
+}
+.contacto-correo img {
+    margin-left: 60px;
+}
+@media screen and (max-width: 767px) {
+    #contenedor-contacto {
+        height: 550px;
+    }
+    #contenedor-contacto h1 {
+        padding-top: 70px;
+        font-size: 28px;
+    }
+    .contacto-telefono p, .contacto-ubicacion p, .contacto-horario p, .contacto-correo p {
+        font-size: 15px;
+    }
+    #contacto-contenido {
+        flex-wrap: wrap;
+        margin-left: 60px;
+        padding-top: 70px;
+    }
+    #contacto-contenido img {
+        width: 90px;
+        height: 100px;
+    }
+}
+
+/*///////////////////////////////////////////////////RESERVA////////////////////////////////////////////*/
+
+#contenedor-reserva {
+    width: 100%;
+    height: 1000px;
+}
+#contenedor-reserva h1 {
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    font-family: 'lobsterregular';
+    font-size: 40px;
+    font-weight: normal;
+}
+#formulario-reserva {
+    width: 55vw;
+    height: 700px;
+    background-color: rgba(234, 234, 234, 0.78);
+    margin: auto;
+}
+#formulario-reserva h2 {
+    padding: 15px 0;
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.89);
+    width: 45vw;
+    margin: auto;
+}
+#reserva-datos {
+    width: 42vw;
+    height: 370px;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+label {
+    font-size: 25px;
+}
+[type="date"] {
+    display: inline-block;
+}
+.area-texto {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+}
+[placeholder] {
+    font-size: 25px;
+}
+[type="submit"] {
+    margin-right: 40px;
+}
+[type="submit"], [type="reset"] {
+    font-size: 25px;
+    border: 2px solid black;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+.espacio {
+    margin: 30px 0;
+}
+@media screen and (max-width: 767px) {
+    #contenedor-reserva h1 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 28px;
+    }
+    label {
+        font-size: 18px;
+    }
+    [type="submit"], [type="reset"] {
+        font-size: 18px;
+        border: 2px solid black;
+        background-color: white;
+        padding: 5px;
+    }
+    [type="submit"] {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    [placeholder] {
+        font-size: 20px;
+    }
+    #formulario-reserva {
+        height: 850px;
+    }
+}
+
+/*/////////////////////////////////////////////////FOOTER//////////////////////////////////////////////////*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--principal);
+    color: var(--white);
+    font-size: 22px;
+    padding: 30px 0;
+}
+footer p:nth-child(1) {
+    padding-left: 30px;
+}
+footer p:nth-child(2) {
+    padding-right: 30px;
+}
+@media screen and (max-width: 767px) {
+    footer {
+        font-size: 15px;
+    }
+}

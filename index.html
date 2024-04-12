@@ -1,0 +1,290 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Delizia Gourmet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".toggle").on("click", function () {
+                if ($(".nav-links").hasClass("active")) {
+                    $(".nav-links").removeClass("active");
+                }
+                else {
+                    $(".nav-links").addClass("active");
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="nav-contenedor">
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="logo"><a href="#">Delizia Gourmet<p class="logo">Restaurante Italiano</p></a></li>
+                <li class="nav-links"><a href="#contenedor-acercade">Acerca de</a></li>
+                <li class="nav-links"><a href="#contenedor-galeria">Galería</a></li>
+                <li class="nav-links"><a href="#contenedor-servicios">Servicios</a></li>
+                <li class="nav-links desplegable">
+                    <a href="#contenedor-menu">Menú</a>
+                    <div class="div-desplegable">
+                        <a href="#menu-pizzas">Pizzas</a>
+                        <a href="#menu-pastas">Pastas</a>
+                        <a href="#menu-lasanas">Lasañas</a>
+                        <a href="#menu-vinos">Vinos</a>
+                    </div>
+                </li>
+                <li class="nav-links"><a href="#contenedor-chef">Chef</a></li>
+                <li class="nav-links btn"><a href="#contenedor-contacto">Contacto</a></li>
+                <li class="toggle"><span class="barras"></span></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="portada">
+        <img id="portada1" src="imagenes/portada.png">
+    </div>
+
+    <section id="contenedor-acercade">
+        <div id="celda1">
+            <div id="contenido-celda1">
+                <h1>Acerca de</h1>
+                <p>¡Auténtico sabor italiano! Utilizamos los mejores ingredientes y los más frescos
+                    para traerte el sabor de Italia a Vitoria Gasteiz, horneamos pizzas, la mejor pasta y las
+                    más ricas lasañas. ¡Te va a encantar!</p>
+                <p>Buena hasta el último bocado. Ese aroma revelador y ese primer bocado, explosión de sabor en el
+                    paladar cuando pruebas una de nuestras pizzas. No son más que el clímax de un buen trabajo en
+                    equipo donde las raíces y la tradición, bien maridadas con un poquito de modernidad y frescura,
+                    tratan de transmitir autenticidad y, sobre todo, felicidad.</p>
+                <p id="parrafo-mayus"><i><b>¡UNA EXPERIENCIA ÚNICA PARA TU PALADAR!</b></i></p>
+            </div>
+        </div>
+        <div id="celda2">
+            <img id="img1-acercade" src="imagenes/pizza-acercade.jpg" alt="Pizza - Acerca de" />
+            <img id="img2-acercade" src="imagenes/pasta-acercade.png" alt="Pasta - Acerca de">
+        </div>
+    </section>
+
+    <section id="contenedor-galeria">
+        <h1>Galería</h1>
+        <div class="marcoFoto">
+            <a href="imagenes/lasana2.jpg" target="_blank"><img src="imagenes/lasana2.jpg" alt="Imagen Lasaña"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/pizza1.webp" target="_blank"><img src="imagenes/pizza1.webp" alt="Imagen Pizza"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/pasta2.jpg" target="_blank"><img src="imagenes/pasta2.jpg" alt="Imagen Pasta"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/pizza2.jpeg" target="_blank"><img src="imagenes/pizza2.jpeg" alt="Imagen Pizza"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/pasta1.jpg" target="_blank"><img src="imagenes/pasta1.jpg" alt="Imagen Pasta"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/lasana3.jpg" target="_blank"><img src="imagenes/lasana3.jpg" alt="Imagen Lasaña"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/lasana1.webp" target="_blank"><img src="imagenes/lasana1.webp" alt="Imagen Lasaña"></a>
+        </div>
+        <div class="marcoFoto">
+            <a href="imagenes/pizza3.jpg" target="_blank"><img src="imagenes/pizza3.jpg" alt="Imagen Pizza"></a>
+        </div>
+    </section>
+
+    <section id="contenedor-servicios">
+        <div id="contenido-servicios">
+            <h1>Servicios</h1>
+            <p>Ese aroma revelador y ese primer bocado, explosión de sabor en el paladar cuando pruebas uno de
+                nuestros servicios. No son más que el clímax de un buen trabajo en equipo donde las raíces y la
+                tradición, bien maridadas con un poquito de modernidad y frescura, tratan de transmitir autenticidad
+                y, sobre todo, felicidad.</p>
+        </div>
+        <div id="imagenes-servicios">
+            <div id="contenedor-pizza">
+                <a href="#menu-pizzas">
+                    <img src="imagenes/pizza.png" alt="pizza" />
+                    <p>PIZZA</p>
+                </a>
+            </div>
+
+            <div id="contenedor-pasta">
+                <a href="#menu-pastas">
+                    <img src="imagenes/pasta.png" alt="pasta" />
+                    <p>PASTA</p>
+                </a>
+            </div>
+
+            <div id="contenedor-lasana">
+                <a href="#menu-lasanas">
+                    <img src="imagenes/lasana.png" alt="lasaña" />
+                    <p>LASAÑA</p>
+                </a>
+            </div>
+
+            <div id="contenedor-bebidas">
+                <a href="#menu-vinos">
+                    <img src="imagenes/bebidas.png" alt="bebidas" />
+                    <p>BEBIDAS</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="contenedor-menu">
+        <h1>Menú</h1>
+        <div id="menu-pizzas">
+            <h2>Pizzas</h2>
+            <div class="tipo-pizza">
+                <p>MARGARITA</p>
+                <p>tomate, mozzarella, oregano.</p>
+                <p>13,50€</p>
+            </div>
+            <div class="tipo-pizza">
+                <p>VEGETARIANA<img src="imagenes/logo-vegetariano.png" alt="logo-vegetariano" /></p>
+                <p>tomate italiano, mozzarella, berenjenas, calabacín, champiñones, alcachofas.</p>
+                <p>14,50€</p>
+            </div>
+            <div class="tipo-pizza">
+                <p>PEPPERONI</p>
+                <p>tomate italiano, mozzarella, pepperoni.</p>
+                <p>14,50€</p>
+            </div>
+        </div>
+        <div id="menu-pastas">
+            <h2>Pastas</h2>
+            <div class="tipo-pasta">
+                <p>BOLOGNESE</p>
+                <p>salsa de tomate hecha en casa con ternera.</p>
+                <p>13€</p>
+            </div>
+            <div class="tipo-pasta">
+                <p>PEPERONCINO E GAMBERI</p>
+                <p>aceite de oliva, ajo, gambas y cayena.</p>
+                <p>13€</p>
+            </div>
+            <div class="tipo-pasta">
+                <p>CARBONARA</p>
+                <p>crema de nata, bacon, yema de huevo y parmesano.</p>
+                <p>13€</p>
+            </div>
+        </div>
+        <div id="menu-lasanas">
+            <h2>Lasañas</h2>
+            <div class="tipo-lasana">
+                <p>TRADIZIONALE BOLOÑESA</p>
+                <p>láminas de pasta rellenas de carne a la boloñesa.</p>
+                <p>10,50€</p>
+            </div>
+            <div class="tipo-lasana">
+                <p>VEGETARIANA<img src="imagenes/logo-vegetariano.png" alt="logo-vegetariano" /></p>
+                <p>láminas de pasta rellenas de verduras asadas en horno de leña.</p>
+                <p>10,50€</p>
+            </div>
+        </div>
+        <div id="menu-vinos">
+            <h2>Vinos</h2>
+            <div class="tipo-vino">
+                <p>BLANCO VERDEJO CASTELLO.</p>
+                <p>12,00€</p>
+            </div>
+            <div class="tipo-vino">
+                <p>BLANCO MOSCATO ASTI DUCHESSA.</p>
+                <p>12,00€</p>
+            </div>
+            <div class="tipo-vino">
+                <p>MAR DE FRADES ALBARIÑO.</p>
+                <p>16,00€</p>
+            </div>
+        </div>
+    </section>
+    <section id="contenedor-chef">
+        <h1>Chef</h1>
+        <div id="contenido-chef">
+            <div id="bloque-izq">
+                <img src="imagenes/chef.jpg" alt="Chef" />
+            </div>
+            <div id="bloque-der">
+                <p>Nuestro chef internacional, dueño de varios restaurantes a lo largo del mundo, ha decidido
+                    poner el foco sobre Vitoria-Gasteiz.</p>
+                <p>Consciente de la fuerte cultura gastronómica vinculada al País Vasco, ha decidido abrir un nuevo
+                    restaurante en la capital. Tras haberse informado de varias ubicaciones posibles, se ha
+                    decantado por nuestra ciudad, entre otras cosas, por el <a id="premio"
+                        href="https://capitalespanoladelagastronomia.es/red-de-gastrociudades/#vitoria"
+                        target="_blank">galardón</a> que obtuvo en 2014 como capital de la gastronomía en España.
+                </p>
+                <p>Este premio se trata de una distinción que otorga la Federación Española de Hostelería con el fin
+                    de dar a conocer y potenciar las bondades gastronómicas de las diferentes ciudades que conforman
+                    la geografía de la península Ibérica.</p>
+                <a href="https://capitalespanoladelagastronomia.es/red-de-gastrociudades/#vitoria" target="_blank"><img
+                        src="imagenes/premio-vitoria.png" Alt="Vitoria Capital Española de la Gastronomía" /></a>
+            </div>
+        </div>
+    </section>
+    <section id="contenedor-contacto">
+        <h1>Contacto</h1>
+        <div id="contacto-contenido">
+            <div class="contacto-telefono">
+                <img src="imagenes/logo-telefono.png" alt="Logo telefono" />
+                <p><i>¡Llámanos!</i></p>
+                <p>945 66 66 66<br>945 12 34 56</p>
+            </div>
+            <div class="contacto-ubicacion">
+                <img src="imagenes/logo-ubicacion.png" alt="Logo ubicacion" />
+                <p><i>Ubicación</i></p>
+                <p>C/ Florida, 54<br>Centro Vitoria-Gasteiz</p>
+            </div>
+            <div class="contacto-horario">
+                <img src="imagenes/logo-horario.png" alt="Logo horario" />
+                <p><i>Horario</i></p>
+                <p>Lunes a Sabado - 9 AM a 11 PM<br>Domingo - 10 AM a 6 PM</p>
+            </div>
+            <div class="contacto-correo">
+                <img src="imagenes/logo-correo.png" alt="Logo correo" />
+                <p><i>¡Escríbenos!</i></p>
+                <p>delizia_gourmet@gmail.com<br>info@delizia.es</p>
+            </div>
+        </div>
+    </section>
+    <section id="contenedor-reserva">
+        <h1>¿Quieres hacer una reserva?</h1>
+        <div id="formulario-reserva">
+            <h2>Delizia Gourmet<br>C/ Florida, 54</h2>
+            <div id="reserva-datos">
+                <form id="reserva" method="post" action="datos-reserva.php">
+                    <label for="fecha">Elige la fecha:</label>
+                    <input type="date" name="fecha" id="fecha" required />
+                    <p class="espacio"></p>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required />
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" required />
+                    <p class="espacio"></p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required />
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono" id="telefono" required />
+
+                    <textarea class="area-texto" id="mensaje" name="mensaje"
+                        placeholder="¿Algo que quieras comentar?"></textarea>
+
+                    <input type="submit" value="Enviar datos" />
+                    <input type="reset" value="Borrar datos" />
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Delizia Gourmet © 2024</p>
+        <p>Twitter | Instagram | Facebook</p>
+    </footer>
+</body>
+
+</html>
