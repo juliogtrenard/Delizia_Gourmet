@@ -513,18 +513,20 @@ li a:hover {
     background-color: rgba(255, 148, 148, 0.21);
 }
 @media screen and (max-width: 767px) {
+    #contenedor-menu {
+        height: 1800px;
+    }
     #contenedor-menu h1 {
         padding-top: 80px;
         font-size: 28px;
     }
     #menu-pizzas h2, #menu-pastas h2, #menu-lasanas h2, #menu-vinos h2 {
-        padding-top: 30px;
-        font-size: 20px;
-        padding-top: 70px;
+        font-size: 18px;
+        padding-top: 20px;
     }
     .tipo-pizza p, .tipo-pasta p, .tipo-lasana p, .tipo-vino p {
         padding: 8px 0;
-        font-size: 17px;
+        font-size: 14px;
     }
 }
 
@@ -656,8 +658,8 @@ li a:hover {
         padding-top: 70px;
     }
     #contacto-contenido img {
-        width: 90px;
-        height: 100px;
+        width: 40px;
+        height: 60px;
     }
 }
 
