@@ -514,7 +514,7 @@ li a:hover {
 }
 @media screen and (max-width: 767px) {
     #contenedor-menu {
-        height: 1800px;
+        height: 1700px;
     }
     #contenedor-menu h1 {
         padding-top: 80px;
@@ -643,7 +643,7 @@ li a:hover {
 }
 @media screen and (max-width: 767px) {
     #contenedor-contacto {
-        height: 550px;
+        height: 650px;
     }
     #contenedor-contacto h1 {
         padding-top: 70px;
